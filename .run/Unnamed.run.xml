@@ -1,0 +1,43 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Unnamed" type="Uproject" factoryName="rider.uproject" nameIsGenerated="true">
+    <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/InsertGameName.uproject" />
+    <configuration_2>
+      <option name="CONFIGURATION" value="Development" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+    </configuration_2>
+    <configuration_3>
+      <option name="CONFIGURATION" value="Development Editor" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+    </configuration_3>
+    <configuration_4>
+      <option name="CONFIGURATION" value="DebugGame" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+    </configuration_4>
+    <configuration_5>
+      <option name="CONFIGURATION" value="DebugGame Editor" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+    </configuration_5>
+    <configuration_6>
+      <option name="CONFIGURATION" value="Shipping" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+    </configuration_6>
+    <method v="2">
+      <option name="Build" />
+    </method>
+  </configuration>
+</component>

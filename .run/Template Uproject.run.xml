@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="true" type="Uproject" factoryName="rider.uproject">
+    <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/InsertGameName.uproject" />
+    <configuration_2>
+      <option name="CONFIGURATION" value="DebugGame Editor" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+    </configuration_2>
+    <method v="2">
+      <option name="Build" />
+    </method>
+  </configuration>
+</component>
