@@ -2,16 +2,3 @@
 
 
 #include "AbstractWindowController.h"
-
-void UAbstractWindowController::Open()
-{
-	WindowPresenter->Open();
-}
-
-void UAbstractWindowController::Close()
-{
-}
-
-void UAbstractWindowController::DestroyWindow()
-{
-}

@@ -3,16 +3,4 @@
 
 #include "AbstractWindowPresenter.h"
 
-void UAbstractWindowPresenter::Open()
-{
-	WindowView->Open();
-}
-
-void UAbstractWindowPresenter::Close()
-{
-	WindowView->Close();
-}
-
-void UAbstractWindowPresenter::DestroyWindow()
-{
-}
+#include "InsertGameName/InsertGameName.h"

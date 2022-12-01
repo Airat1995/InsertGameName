@@ -22,7 +22,7 @@ class INSERTGAMENAME_API UWindowDataAsset : public UPrimaryDataAsset
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Window", meta = (AllowPrivateAccess = true))
 	FName Name;
-
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Window", meta = (AllowPrivateAccess = true, AssetBundles = "Window"))
 	TSoftClassPtr<UAbstractWindowView> View;
 
@@ -31,6 +31,9 @@ class INSERTGAMENAME_API UWindowDataAsset : public UPrimaryDataAsset
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Window", meta = (AllowPrivateAccess = true, AssetBundles = "Window"))
 	TSoftClassPtr<UAbstractWindowController> Controller;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Cursor", meta = (AllowPrivateAccess = true))
+	bool bShowCursorOnWindow = true;
 
 public:
 
@@ -52,6 +55,11 @@ public:
 	TSoftClassPtr<UAbstractWindowController> GetWindowController() const noexcept
 	{
 		return Controller;
+	}
+
+	bool GetShouldShowCursor() const noexcept
+	{
+		return bShowCursorOnWindow;
 	}
 
 	virtual FPrimaryAssetId GetPrimaryAssetId() const override

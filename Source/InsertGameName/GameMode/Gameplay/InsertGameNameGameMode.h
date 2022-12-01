@@ -4,15 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "ArenaGameState.h"
 #include "MapDataAsset.h"
-#include "AssetLoadingState.h"
-#include "UObject/ConstructorHelpers.h"
-#include "InsertGameNameInstance.h"
-#include "Kismet/GameplayStatics.h"
-#include "MainPlayerController.h"
-#include "MapAssetManager.h"
-#include "PowerUpSystem.h"
+#include "InsertGameName/AssetLoadingState.h"
+#include "InsertGameName/MapAssetManager.h"
+#include "InsertGameName/PowerUpSystem.h"
+#include "InsertGameName/TargetSpawner.h"
 #include "InsertGameNameGameMode.generated.h"
 
 UCLASS(minimalapi)

@@ -3,6 +3,9 @@
 
 #include "InsertGameNameInstance.h"
 
+#include "AbstractWindowService.h"
+#include "MainWindowService.h"
+
 UInsertGameNameInstance::UInsertGameNameInstance()
 {
 }
@@ -14,7 +17,7 @@ void UInsertGameNameInstance::SetMapDataAsset(TObjectPtr<UMapDataAsset> DataAsse
 
 TObjectPtr<UMapDataAsset> UInsertGameNameInstance::GetMapDataAsset() const noexcept
 {
-	UMapAssetManager& AssetManager = UMapAssetManager::Get();
+	const UMapAssetManager& AssetManager = UMapAssetManager::Get();
 
 	TArray<TObjectPtr<UMapDataAsset>> Assets = AssetManager.GetAllMaps();
 
@@ -35,4 +38,12 @@ EDifficulty UInsertGameNameInstance::GetSelectedDifficulty() const noexcept
 TObjectPtr<UServiceContainer> UInsertGameNameInstance::GetServiceContainer() const noexcept
 {
 	return ServiceContainer;
+}
+
+void UInsertGameNameInstance::OnStart()
+{
+	Super::OnStart();
+	
+	ServiceContainer = NewObject<UServiceContainer>();
+	ServiceContainer->RegisterService<AbstractWindowService, UMainWindowService>();
 }

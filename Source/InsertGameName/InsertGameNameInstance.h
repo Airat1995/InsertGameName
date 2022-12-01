@@ -28,6 +28,10 @@ public:
 
 	TObjectPtr<UServiceContainer> GetServiceContainer() const noexcept;
 
+protected:
+
+	virtual void OnStart() override;
+
 private:
 
 	UPROPERTY()

@@ -21,7 +21,7 @@ class INSERTGAMENAME_API UBaseUI : public UCommonActivatableWidget
 
 public:
 
-	void OpenWindow(const UAbstractWindowController& WindowController) const;
+	void OpenWindow(TObjectPtr<UAbstractWindowController> WindowController) const;
 
-	void CloseWindow(const UAbstractWindowController& WindowController) const;
+	void CloseWindow(TObjectPtr<UAbstractWindowController> WindowController) const;
 };

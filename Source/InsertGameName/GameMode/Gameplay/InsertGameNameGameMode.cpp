@@ -2,11 +2,12 @@
 
 #include "InsertGameNameGameMode.h"
 
-#include "MapActor.h"
 #include "ServiceContainer.h"
+#include "InsertGameName/ArenaGameState.h"
+#include "InsertGameName/InsertGameNameInstance.h"
+#include "InsertGameName/MainPlayerController.h"
+#include "InsertGameName/MapActor.h"
 #include "Main/MainWindowFactory.h"
-#include "WindowService/AbstractWindowService.h"
-#include "WindowService/MainWindowService.h"
 
 
 AInsertGameNameGameMode::AInsertGameNameGameMode()
@@ -122,23 +123,10 @@ void AInsertGameNameGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 	UMapAssetManager& AssetManager = UMapAssetManager::Get();
-
-	UServiceContainer* ServiceContainer = NewObject<UServiceContainer>();
-	ServiceContainer->RegisterService<AbstractWindowService, UMainWindowService>();
-	AbstractWindowService& WindowService = ServiceContainer->GetService<AbstractWindowService>();
-
-	TArray<TObjectPtr<UWindowDataAsset>> WindowDataAssets = AssetManager.GetAllWindows();
-	
-	FMainWindowFactory* MainWindowFactory = new FMainWindowFactory(GetWorld(), WindowDataAssets[0]);
-	WindowService.RegisterWindowFactory(MainWindowFactory);
-
-	WindowService.OpenWindow(UMainWindowController::StaticClass());
-	
 	
 	PrimaryActorTick.SetTickFunctionEnable(false);
 	ScoreCounter = UScoreCounter::Make(this);
 	GameTimer = UGlobalTimer::Make(this);
-	
 	
 	const TObjectPtr<UInsertGameNameInstance> GameInstance = Cast<UInsertGameNameInstance>(GetGameInstance());
 	const TObjectPtr<UMapDataAsset> MapDataAsset = GameInstance->GetMapDataAsset();

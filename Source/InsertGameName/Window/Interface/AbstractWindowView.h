@@ -16,9 +16,9 @@ class INSERTGAMENAME_API UAbstractWindowView : public UCommonActivatableWidget
 
 public:
 
-	virtual void Open();
+	virtual void Open() PURE_VIRTUAL(UAbstractWindowView::Open,);
 
-	virtual void Close();
+	virtual void Close() PURE_VIRTUAL(UAbstractWindowView::Close,);
 
-	virtual void DestroyWindow();
+	virtual void DestroyWindow() PURE_VIRTUAL(UAbstractWindowView::DestroyWindow,);
 };

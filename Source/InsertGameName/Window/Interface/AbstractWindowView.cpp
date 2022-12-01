@@ -2,15 +2,3 @@
 
 
 #include "AbstractWindowView.h"
-
-void UAbstractWindowView::Open()
-{
-}
-
-void UAbstractWindowView::Close()
-{
-}
-
-void UAbstractWindowView::DestroyWindow()
-{
-}

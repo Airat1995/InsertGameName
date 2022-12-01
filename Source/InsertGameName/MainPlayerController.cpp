@@ -2,7 +2,7 @@
 
 
 #include "MainPlayerController.h"
-#include "InsertGameNameGameMode.h"
+#include "GameMode/Gameplay/InsertGameNameGameMode.h"
 
 AMainPlayerController::AMainPlayerController()
 {

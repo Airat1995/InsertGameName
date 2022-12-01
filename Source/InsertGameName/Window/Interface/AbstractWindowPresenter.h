@@ -16,19 +16,11 @@ class INSERTGAMENAME_API UAbstractWindowPresenter : public UObject
 	GENERATED_BODY()
 	
 public:
-	virtual void Open();
+	virtual void Open() PURE_VIRTUAL(UAbstractWindowPresenter::Open,);
 
-	virtual void Close();
+	virtual void Close() PURE_VIRTUAL(UAbstractWindowPresenter::Close,);
 
-	virtual void DestroyWindow();
+	virtual void DestroyWindow() PURE_VIRTUAL(UAbstractWindowPresenter::DestroyWindow,);
 	
-	FORCEINLINE UCommonActivatableWidget& GetView() const
-	{
-		return *WindowView;
-	}
-
-protected:
-
-	UPROPERTY()
-	UAbstractWindowView* WindowView;
+	virtual TObjectPtr<UCommonActivatableWidget> GetView() const  PURE_VIRTUAL(UAbstractWindowPresenter::GetView, return nullptr; );
 };

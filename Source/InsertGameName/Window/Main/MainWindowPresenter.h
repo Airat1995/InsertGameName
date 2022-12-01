@@ -15,6 +15,11 @@ UCLASS()
 class INSERTGAMENAME_API UMainWindowPresenter : public UAbstractWindowPresenter
 {
 	GENERATED_BODY()
+
+	friend class FMainWindowFactory;
+
+	void Init(TObjectPtr<UMainWindowView> View);
+	
 public:
 	
 	virtual ~UMainWindowPresenter() override;
@@ -23,9 +28,8 @@ public:
 
 	virtual void Close() override;
 
-	void Init(TObjectPtr<UMainWindowView> View);
-
 protected:
 
+	UPROPERTY()
 	TObjectPtr<UMainWindowView> WindowView;
 };

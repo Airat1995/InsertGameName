@@ -3,12 +3,12 @@
 
 #include "BaseUI.h"
 
-void UBaseUI::OpenWindow(const UAbstractWindowController& WindowController) const
+void UBaseUI::OpenWindow(TObjectPtr<UAbstractWindowController> WindowController) const
 {
-	WindowStack->AddWidgetInstance(WindowController.GetWindowView());
+	WindowStack->AddWidgetInstance(*WindowController->GetWindowView());
 }
 
-void UBaseUI::CloseWindow(const UAbstractWindowController& WindowController) const
+void UBaseUI::CloseWindow(TObjectPtr<UAbstractWindowController> WindowController) const
 {
-	WindowStack->RemoveWidget(WindowController.GetWindowView());
+	WindowStack->RemoveWidget(*WindowController->GetWindowView());
 }

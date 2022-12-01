@@ -15,14 +15,28 @@ UCLASS()
 class INSERTGAMENAME_API UMainWindowController : public UAbstractWindowController
 {
 	GENERATED_BODY()
+
+	friend class FMainWindowFactory;
+
+	void Init(const TObjectPtr<UMainWindowPresenter>& Object, bool bShowCursor);
 	
 public:
 
 	virtual ~UMainWindowController() override;
-	
-	void Init(const TObjectPtr<UMainWindowPresenter>& Object);
+
+	virtual void Open() override;
+
+	virtual void Close() override;
+
+	virtual void DestroyWindow() override;
 
 protected:
 
+	UPROPERTY()
 	TObjectPtr<UMainWindowPresenter> Presenter;
+
+	UPROPERTY()
+	TObjectPtr<APlayerController> PlayerController;
+	
+	bool bShouldShowCursor;
 };
